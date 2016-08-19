@@ -1,4 +1,8 @@
 var ourLocalData = [
+
+{"title":"In class","body":"<p>What we learned:</p>\n<pre><code>function sayHi(){\n    console.log(&#39;Hello!&#39;);\n}\n</code></pre>","author":"Megan","authorUrl":"meganrielmehan.com","category":"building forms","publishedOn":null,"daysAgo":17032,"publishStatus":"(draft)"},
+
+
   {
     title:       'Bacon Ipsum',
     category:    'food',
