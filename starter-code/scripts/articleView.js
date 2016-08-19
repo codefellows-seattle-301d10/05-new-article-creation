@@ -84,6 +84,11 @@ articleView.create = function() {
     publishedOn: $('#article-published:checked').length ? new Date() : null
   });
   $('#article-preview').append(formArticle.toHtml('#article-template'));
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+  $('#export-field').show();
+  $('#article-json').val(JSON.stringify(formArticle));
 };
 
 articleView.render();
