@@ -87,7 +87,7 @@ articleView.create = function() {
 
   $('#article-preview').append(formArticle.toHtml('#article-template'));
 
-  $('pre-code').each(function(i, block) {
+  $('pre code').each(function(i, block) {
     hljs.highlightBlock(block);
   });
 
