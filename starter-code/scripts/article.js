@@ -9,7 +9,6 @@ function Article (opts) {
 Article.prototype.toHtml = function(scriptTemplateId) {
   var renderTemplate = Handlebars.compile($(scriptTemplateId).html());
 
-
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   if(this.daysAgo < 1) {
     this.publishStatus = '(published today)';
@@ -17,7 +16,6 @@ Article.prototype.toHtml = function(scriptTemplateId) {
     this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
   }
   // TODO: Parse any markdown with marked!
-  this.body = marked(this.body);
 
   return renderTemplate(this);
 };
